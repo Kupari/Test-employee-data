@@ -1,6 +1,6 @@
 from random import randint
     
-class hetugen(object):
+class SSN_generator(object):
 
     def __init__(self,gender='random',custom=False):
         '''| gender: default is random, (M)ale or (F)emale | birthdate: ddmmyyyy... |'''
@@ -41,4 +41,4 @@ class hetugen(object):
         self.birthdate = birthdate
 
 if __name__ == '__main__':
-    print(hetugen(custom=True).ssn)
+    print(SSN_generator(custom=True).ssn)
