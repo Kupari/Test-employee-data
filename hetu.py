@@ -3,7 +3,7 @@ from random import randint
 class hetugen(object):
 
     def __init__(self,gender='random',custom=False):
-        '''| gender: default is random, (M)ale or (F)emale | birthdate: ddmmyy... |'''
+        '''| gender: default is random, (M)ale or (F)emale | birthdate: ddmmyyyy... |'''
 
         if gender =='random' and custom==False: self.gender = ['M','F'][randint(0,1)]
         else: self.gender = input('Gender: ').capitalize()
