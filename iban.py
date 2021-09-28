@@ -3,13 +3,13 @@ import json
 import os
 
 file_path = os.path.dirname(os.path.abspath(__file__))
-
+readfiles = os.path.join(file_path,"readfiles")
 class IBAN:
     
 
 
     def __init__(self):
-        with open(file_path+'\BIC.txt','r') as biclist:
+        with open(readfiles+r'\BIC.txt','r') as biclist:
             biclist = json.load(biclist)
             randombic = biclist[randint(1,665)]
             self.code = randombic['Code']
@@ -63,7 +63,7 @@ class IBAN:
         return self.iban
 
     def details(self):
-        return self.calculate_random_iban() +' : '+ self.bic +' : '+ self.bank
+        return {"IBAN": self.calculate_random_iban(), "BIC": self.bic,'bank': self.bank}
 
 
 

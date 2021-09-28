@@ -1,7 +1,7 @@
 from random import randint
 from datetime import datetime
     
-class SSN_generator(object):
+class SSN_generator:
 
     def __init__(self,custom=False):
         '''| gender: default is random, (M)ale or (F)emale | birthday: ddmmyyyy... |'''
